@@ -12,3 +12,4 @@ Git:
 8.To push and pull the code <br/>
     Push: git push your_branch<br/>
     Pull: git pull your_branch<br/>
+This is the process how to use git and link github repo in our local computer.
