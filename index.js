@@ -27,3 +27,15 @@ Line
 Comment */
 
 //use var and let keyword for four variables
+
+var employeeName = "Kiran"
+var bankName = "NIC Asia"
+bankName = "Siddhartha"  //reassigning the var value
+console.log(bankName)
+var templeName = "Pashupati Temple"
+var mathMarks = 90
+
+let myMarks = [80,90,70,60,50]
+let mySubject = ["Math","Science","Physics","Social","Computer Network"]
+let myPercentage = 70.8
+let mySchool = "XYZ School"
