@@ -82,15 +82,35 @@ Comment */
 
 // Add two numbers 
 
-const firstNumber = Number(prompt("Please enter first Number"));
-const secondNumber = Number(prompt("Please enter second Number"));
+// const firstNumber = Number(prompt("Please enter first Number"));
+// const secondNumber = Number(prompt("Please enter second Number"));
 
-const result = firstNumber + secondNumber;
-console.log(1/0)
-if (isNaN(result)){
-    alert("Please enter numbers only.")
-}
-else{
-    alert(`The result is ${result}`)
-}
+// const result = firstNumber + secondNumber;
+// console.log(1/0)
+// if (isNaN(result)){
+//     alert("Please enter numbers only.")
+// }
+// else{
+//     alert(`The result is ${result}`)
+// }
 
+//Ternary Operator
+//condition ? true : false
+
+//if else 
+//isNaN(result) ? alert("Please enter numbers only.") : alert(`The result is ${result}`);
+
+//else if else
+// condition ? statement : condition ? statement : statement
+// const month = prompt("Please enter Month");
+// month === "jan" ? alert("January") : month === "feb" ? alert("Feburary"): alert("March")
+
+//operators
+
+// const userName = prompt("What is your name?");
+// const time = Number(prompt("Enter the time in hours"));
+
+// isNaN(time)? alert("Invalid time"): time >=5 && time < 12 ? alert(`Good morning ${userName}`) : time >= 12 && time <3 ? alert(`Good afternoon ${userName}`):alert(`Good evening ${userName}`);
+
+
+// assigment : Make a multiplication table of 2,3,5 using for , while and do while loop 
