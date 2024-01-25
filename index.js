@@ -70,14 +70,27 @@ Comment */
 //         break;
 // }
 
-const userName = prompt("Please enter your username:");
-const password = prompt("Please enter your password");
+// const userName = prompt("Please enter your username:");
+// const password = prompt("Please enter your password");
 
-if (userName === password){
-        alert(`Welcome ${userName}`);
-}
-else{
-    alert("Incorrect username and password.");
-}
+// if (userName === password){
+//         alert(`Welcome ${userName}`);
+// }
+// else{
+//     alert("Incorrect username and password.");
+// }
 
 // Add two numbers 
+
+const firstNumber = Number(prompt("Please enter first Number"));
+const secondNumber = Number(prompt("Please enter second Number"));
+
+const result = firstNumber + secondNumber;
+console.log(1/0)
+if (isNaN(result)){
+    alert("Please enter numbers only.")
+}
+else{
+    alert(`The result is ${result}`)
+}
+
