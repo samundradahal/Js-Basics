@@ -127,7 +127,7 @@ while(i<=10){
 console.log("--------------------")
 let j = 1;
 do{
-    console.log(`5 * ${i} = ${5*j}`);
+    console.log(`5 * ${j} = ${5*j}`);
     j++;  
 }
 while(j<=10)
