@@ -114,3 +114,20 @@ Comment */
 
 
 // assigment : Make a multiplication table of 2,3,5 using for , while and do while loop 
+
+for(let i=1 ; i<=10; i++){
+    console.log(`2 * ${i} = ${2*i}`);
+}
+console.log("--------------------")
+let i = 1;
+while(i<=10){
+    console.log(`3 * ${i} = ${3*i}`);
+    i++;
+}
+console.log("--------------------")
+let j = 1;
+do{
+    console.log(`5 * ${i} = ${5*j}`);
+    j++;  
+}
+while(j<=10)
