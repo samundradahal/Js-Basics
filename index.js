@@ -203,9 +203,35 @@ Comment */
 //Assignment 
 //JS Function that converts regular text to proper case
 //samundra dahal =. Samundra Dahal
+
+const properCase = (word) =>{
+    let newString = ""
+    for (let i = 0 ; i< word.length ; i++){
+        i === 0 || i === word.indexOf(" ") + 1 ? newString += word[i].toUpperCase() :  newString += word[i];
+    }
+    return newString;
+}
+
+ 
+
+const result2 = properCase("sagar dahal")
+console.log(result2)
 //JS Function that converts long text to .... format
 //Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan
 // Raktim is a Mern Stack teacher. He is ....
+
+const longFormat = (word) =>{
+    return word.substring(0,46).padEnd(49,".")
+}
+const result1 = longFormat("Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan")
+console.log(result1)
 //JS Function that replaces C++ to mern
 ///Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan
 //Raktim is a Mern teacher. He is teaching us Mern Course from 20th Jan
+
+const replaceWord = (word) =>{
+    return word.replaceAll("C++" , "Mern")
+}
+
+const result = replaceWord("Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan")
+console.log(result)
