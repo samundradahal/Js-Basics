@@ -1,6 +1,7 @@
 //Prints the message
 // console.log("Hello Worlds");
 
+
 //Variables(var,let,const)
 //camelCase pattern for variable assignment
 
@@ -115,19 +116,96 @@ Comment */
 
 // assigment : Make a multiplication table of 2,3,5 using for , while and do while loop 
 
-for(let i=1 ; i<=10; i++){
-    console.log(`2 * ${i} = ${2*i}`);
-}
-console.log("--------------------")
-let i = 1;
-while(i<=10){
-    console.log(`3 * ${i} = ${3*i}`);
-    i++;
-}
-console.log("--------------------")
-let j = 1;
-do{
-    console.log(`5 * ${j} = ${5*j}`);
-    j++;  
-}
-while(j<=10)
+// for(let i=1 ; i<=10; i++){
+//     console.log(`2 * ${i} = ${2*i}`);
+// }
+// console.log("--------------------")
+// let i = 1;
+// while(i<=10){
+//     console.log(`3 * ${i} = ${3*i}`);
+//     i++;
+// }
+// console.log("--------------------")
+// let j = 1;
+// do{
+//     console.log(`5 * ${j} = ${5*j}`);
+//     j++;  
+// }
+// while(j<=10)
+
+//functions
+
+//Write a function to do multiplication table of 2
+
+// function table2(number){
+//     return 2*number;
+// }
+
+
+// const selectNumber = Number(prompt("2*?"))
+// const result = table2(selectNumber);
+// console.log(result)
+
+
+//Function to find the area of rectangle;
+
+// const areaOfRect = (l,b) =>{
+//     return(l*b);
+// }
+
+// const length = Number(prompt("Enter length"))
+// const breadth = Number(prompt("Enter breadth"))
+
+// result1 = areaOfRect(length,breadth);
+// console.log(result1);
+
+
+//Function to revers a number
+
+// const reverse = (number)=>{
+//     const str = String(number)
+//     let newString = "";
+//     for(let i = str.length - 1 ; i >= 0; i--){
+//         newString += str[i];
+//     }
+//     return newString;
+// }
+
+// const result = reverse(312134);
+// console.log({result})
+
+// Comma seperator function
+
+// const commaFormatter = (num) =>{
+//     const str = String(num)
+//     let newString = ""
+//     let reverseString = ""
+//     let counter = 0
+//     for(let i = str.length - 1 ; i >= 0 ; i--){
+//         if (counter === 3){
+//             newString += ","
+//             counter = 0
+//         } 
+//         newString += str[i]
+//         counter ++;
+//     }
+//     for(let i = newString.length - 1 ; i >= 0 ; i--){
+//         reverseString += newString[i]
+//     }
+
+//     return reverseString;
+// }
+
+// const result = commaFormatter(1000000000);
+// console.log({result})
+
+
+//Assignment 
+//JS Function that converts regular text to proper case
+//samundra dahal =. Samundra Dahal
+//JS Function that converts long text to .... format
+//Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan
+// Raktim is a Mern Stack teacher. He is ....
+//JS Function that replaces C++ to mern
+///Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan
+//Raktim is a Mern teacher. He is teaching us Mern Course from 20th Jan
