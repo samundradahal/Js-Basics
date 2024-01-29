@@ -204,34 +204,89 @@ Comment */
 //JS Function that converts regular text to proper case
 //samundra dahal =. Samundra Dahal
 
-const properCase = (word) =>{
-    let newString = ""
-    for (let i = 0 ; i< word.length ; i++){
-        i === 0 || i === word.indexOf(" ") + 1 ? newString += word[i].toUpperCase() :  newString += word[i];
-    }
-    return newString;
-}
+// const properCase = (word) =>{
+//     let newString = ""
+//     for (let i = 0 ; i< word.length ; i++){
+//         i === 0 || i === word.indexOf(" ") + 1 ? newString += word[i].toUpperCase() :  newString += word[i];
+//     }
+//     return newString;
+// }
 
  
 
-const result2 = properCase("sagar dahal")
-console.log(result2)
+// const result2 = properCase("sagar dahal")
+// console.log(result2)
 //JS Function that converts long text to .... format
 //Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan
 // Raktim is a Mern Stack teacher. He is ....
 
-const longFormat = (word) =>{
-    return word.substring(0,46).padEnd(49,".")
-}
-const result1 = longFormat("Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan")
-console.log(result1)
+// const longFormat = (word) =>{
+//     return word.substring(0,46).padEnd(49,".")
+// }
+// const result1 = longFormat("Raktim is a Mern Stack teacher. He is teaching us Mern Course from 20th Jan")
+// console.log(result1)
 //JS Function that replaces C++ to mern
 ///Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan
 //Raktim is a Mern teacher. He is teaching us Mern Course from 20th Jan
 
-const replaceWord = (word) =>{
-    return word.replaceAll("C++" , "Mern")
-}
+// const replaceWord = (word) =>{
+//     return word.replaceAll("C++" , "Mern")
+// }
 
-const result = replaceWord("Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan")
-console.log(result)
+// const result = replaceWord("Raktim is a C++ teacher. He is teaching us C++ Course from 20th Jan")
+// console.log(result)
+
+
+//JS function that validates string email or not
+
+// const emailFinder = (email)=>{
+//     if (email.includes("@")) {
+//         return "Valid Email";
+//     }
+//     else{
+//         return "Invalid Email";
+//     }
+// }
+
+// const result = emailFinder("samundra")
+// console.log(result)
+
+// const result1 = emailFinder("samundra@gmail.com")
+// console.log(result1)
+
+
+//JS function to count no of vowels
+
+// const vowelCount = (sentence)=>{
+//     lowCase = sentence.toLowerCase()
+//     let counter = 0
+//     for(let i = 0 ; i<lowCase.length; i++){
+//        if (lowCase[i] === "a" || lowCase[i] === "e" || lowCase[i] === "i" || lowCase[i] === "o" || lowCase[i] === "u"){
+//         counter ++;
+//        }
+//     }
+//     return counter
+// }
+
+
+// const result4 = vowelCount("aaaaaaaaeeeeeee")
+// const result5 = vowelCount("sdgdfhgdsfgew")
+
+// console.log(result4 , result5)
+
+// Coluser Function
+
+// const print = (name) =>{
+//     return `Print is ${name}`
+// }
+
+// const mainFn = (fname , lname , cb) =>{
+//     const name = fname.concat(" ", lname)
+//     return cb(name)
+// }
+
+// const result = mainFn("samundra", "dahal" , print)
+// console.log(result)
+
+//JS Function that checks if the password is valid password or not
+//condition : at least 1 lower case at least 1 upper case at least 1 symbol password > 8 at least 1 number
