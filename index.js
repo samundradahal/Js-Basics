@@ -290,3 +290,36 @@ Comment */
 
 //JS Function that checks if the password is valid password or not
 //condition : at least 1 lower case at least 1 upper case at least 1 symbol password > 8 at least 1 number
+
+const checkPassword = (password)=>{
+    let isUpperCase = false
+    let isLowerCase = false
+    let isSymbol = false
+    let isNumber = false
+    let asciiNumber = 0
+    if (password.length <= 8){
+        return "Password must contains 8 characters"
+    }
+    for (let i = 0 ; i<password.length ; i++ ){
+        asciiNumber = password.charCodeAt(i); 
+        
+        (asciiNumber >= 65 && asciiNumber <=90) ?
+        isUpperCase = true:
+        (asciiNumber >= 97 && asciiNumber <= 122) ?
+        isLowerCase = true : 
+        asciiNumber >= 48 && asciiNumber <= 57 ?  
+        isNumber = true : 
+        isSymbol = true;
+        console.log({isLowerCase , isUpperCase , isSymbol , isNumber})
+    }
+    
+   if  (isUpperCase && isLowerCase && isNumber && isSymbol) {
+    return "Valid Password"
+   }
+   else{
+    return "Password must contains at least one uppercase , one lowercase , one number and one symbol"
+   }
+}
+
+const result = checkPassword("SSAM11@2345")
+console.log(result)
