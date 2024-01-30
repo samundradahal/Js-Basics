@@ -291,35 +291,98 @@ Comment */
 //JS Function that checks if the password is valid password or not
 //condition : at least 1 lower case at least 1 upper case at least 1 symbol password > 8 at least 1 number
 
-const checkPassword = (password)=>{
-    let isUpperCase = false
-    let isLowerCase = false
-    let isSymbol = false
-    let isNumber = false
-    let asciiNumber = 0
-    if (password.length <= 8){
-        return "Password must contains 8 characters"
-    }
-    for (let i = 0 ; i<password.length ; i++ ){
-        asciiNumber = password.charCodeAt(i); 
+// const checkPassword = (password)=>{
+//     let isUpperCase = false
+//     let isLowerCase = false
+//     let isSymbol = false
+//     let isNumber = false
+//     let isSpace = false
+//     let asciiNumber = 0
+//     if (password.length <= 8){
+//         return "Password must contains 8 characters"
+//     }
+//     for (let i = 0 ; i<password.length ; i++ ){
+//         asciiNumber = password.charCodeAt(i); 
         
-        (asciiNumber >= 65 && asciiNumber <=90) ?
-        isUpperCase = true:
-        (asciiNumber >= 97 && asciiNumber <= 122) ?
-        isLowerCase = true : 
-        asciiNumber >= 48 && asciiNumber <= 57 ?  
-        isNumber = true : 
-        isSymbol = true;
-        console.log({isLowerCase , isUpperCase , isSymbol , isNumber})
-    }
+//         (asciiNumber >= 65 && asciiNumber <=90) ?
+//         isUpperCase = true:
+//         (asciiNumber >= 97 && asciiNumber <= 122) ?
+//         isLowerCase = true : 
+//         (asciiNumber >= 48 && asciiNumber <= 57)?  
+//         isNumber = true : 
+//         asciiNumber === 32?
+//         isSpace = true:
+//         isSymbol = true;
+//     }
     
-   if  (isUpperCase && isLowerCase && isNumber && isSymbol) {
-    return "Valid Password"
-   }
-   else{
-    return "Password must contains at least one uppercase , one lowercase , one number and one symbol"
-   }
-}
+//    if  (isUpperCase && isLowerCase && isNumber && isSymbol) {
+//     return "Valid Password"
+//    }
+//    else{
+//     return "Password must contains at least one uppercase , one lowercase , one number and one symbol"
+//    }
+// }
 
-const result = checkPassword("SSAM11@2345")
-console.log(result)
+// const result = checkPassword("123456789Cs &")
+// console.log(result)
+
+// JS function to check palindrome
+
+// const checkPalindrom = (word) =>{
+//     let newString = ""
+//     for(i = word.length - 1;i >= 0 ; i-- ){
+//         newString += word[i]
+//     }
+
+//     if (word === newString){
+//         return `${word} is palindrome`
+//     }
+//     else{
+//         return `${word} is not palindrome` 
+//     }
+// }
+
+// const result = checkPalindrom("lol")
+// console.log(result)
+
+// const result1 = checkPalindrom("lolm")
+// console.log(result1)
+
+
+//Convert degree celcius to farheniet to vice versa and use celcius as default
+
+// const changeTemp = (value , type = "C") =>{
+//     const numValue = Number(value)
+//     if (type === "F"){
+//         return ((numValue-32)/9)*5
+//     }
+//     return ((9*numValue)/5)+32
+// }
+
+// const result = changeTemp("60")
+// console.log(result)
+
+// const result1 = changeTemp("45" , "F")
+// console.log(result1)
+
+//Objects
+
+// const person = {
+//     name : "Samundra Dahal",
+//     birthYear : 2055,
+//     isMale : true,
+//     age : function(){
+//         return 2080-this.birthYear
+//     },
+//     calcAge : function(){
+//         return 2080-person.birthYear
+//     },
+// };
+
+// console.log(person.name)
+// console.log(person.age())
+// console.log(person.calcAge())
+
+
+//Create your own Object for car , laptop , tv and do CRUD operations
+
