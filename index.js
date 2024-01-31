@@ -386,3 +386,41 @@ Comment */
 
 //Create your own Object for car , laptop , tv and do CRUD operations
 
+const car = {
+    name: "BMW",
+    manufactureYear : 2013,
+    color : "White",
+    manufactureAge : function(){
+        return 2024-this.manufactureYear
+    }
+
+}
+
+console.log(car.name)
+console.log(car.manufactureAge())
+
+car.manufactureYear = 2020
+console.log(car.manufactureAge())
+
+delete car;
+
+const laptop = {
+    name: "MacBook Air 2020",
+    manufactureYear : 2020,
+    color : "Gold",
+    laptopSize : 13
+}
+
+console.log(laptop.name)
+laptop.name = "Dell"
+
+console.log(laptop.name)
+delete laptop
+
+const tv = {
+    name: "Sony 52 inch",
+    manufactureYear : 2019,
+    color : "Gold",
+    brand :"Sony"
+}
+
