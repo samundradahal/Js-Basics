@@ -386,41 +386,101 @@ Comment */
 
 //Create your own Object for car , laptop , tv and do CRUD operations
 
-const car = {
-    name: "BMW",
-    manufactureYear : 2013,
-    color : "White",
-    manufactureAge : function(){
-        return 2024-this.manufactureYear
+// const car = {
+//     name: "BMW",
+//     manufactureYear : 2013,
+//     color : "White",
+//     manufactureAge : function(){
+//         return 2024-this.manufactureYear
+//     }
+
+// }
+
+// console.log(car.name)
+// console.log(car.manufactureAge())
+
+// car.manufactureYear = 2020
+// console.log(car.manufactureAge())
+
+// delete car;
+
+// const laptop = {
+//     name: "MacBook Air 2020",
+//     manufactureYear : 2020,
+//     color : "Gold",
+//     laptopSize : 13
+// }
+
+// console.log(laptop.name)
+// laptop.name = "Dell"
+
+// console.log(laptop.name)
+// delete laptop
+
+// const tv = {
+//     name: "Sony 52 inch",
+//     manufactureYear : 2019,
+//     color : "Gold",
+//     brand :"Sony"
+// }
+
+//SPread Operator
+
+// const person = {
+//     name : "Samundra",
+//     password:"xyz@1234",
+//     email : "sam@gmail.com"
+// }
+
+// const {password, ...per} = person
+// console.log(per)
+
+//Exercise
+
+// const prod = {
+//     name: "headphones",
+//     price: 200,
+//     //discount: "7%",
+// }
+
+// if (prod.hasOwn("discount")){
+//     console.log(`Already discounted by ${prod.discount} `)
+// }
+// else{
+//     if (prod.price <100){
+//         prod.price = prod.price  - (prod.price * (7/100))
+//         prod.discount = "7%"
+//         console.log(prod)
+//     }
+//     else{
+//         prod.price = prod.price  - (prod.price * (10/100)) 
+//         prod.discount = "10%"
+//         console.log(prod)
+//     }
+// }
+
+//Assignment
+
+const group = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
+const group1 = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
+
+const compareAge = (a,b) => a.age - b.age
+
+
+
+console.log(group.sort(compareAge))
+
+console.log(group.sort((a,b)=>{
+    const ageA = a.age
+    const ageB = b.age
+
+    if (ageA > ageB){
+        return 1;
     }
+    if (ageA < ageB){
+        return -1
+    }
+    return 0
+}))
 
-}
-
-console.log(car.name)
-console.log(car.manufactureAge())
-
-car.manufactureYear = 2020
-console.log(car.manufactureAge())
-
-delete car;
-
-const laptop = {
-    name: "MacBook Air 2020",
-    manufactureYear : 2020,
-    color : "Gold",
-    laptopSize : 13
-}
-
-console.log(laptop.name)
-laptop.name = "Dell"
-
-console.log(laptop.name)
-delete laptop
-
-const tv = {
-    name: "Sony 52 inch",
-    manufactureYear : 2019,
-    color : "Gold",
-    brand :"Sony"
-}
 
