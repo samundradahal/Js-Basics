@@ -314,7 +314,6 @@ Comment */
 //         isSpace = true:
 //         isSymbol = true;
 //     }
-    
 //    if  (isUpperCase && isLowerCase && isNumber && isSymbol) {
 //     return "Valid Password"
 //    }
@@ -461,26 +460,75 @@ Comment */
 
 //Assignment
 
-const group = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
-const group1 = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
+// const group = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
+// const group1 = [{name : "Samundra Dahal", age: 25},{name : "Sagar Dahal" , age:25},{name: "Kiran Neupane" , age: 19},{name:"Sangeet Chand",age:6}]
 
-const compareAge = (a,b) => a.age - b.age
+// const compareAge = (a,b) => a.age - b.age
 
 
 
-console.log(group.sort(compareAge))
+// console.log(group.sort(compareAge))
 
-console.log(group.sort((a,b)=>{
-    const ageA = a.age
-    const ageB = b.age
+// console.log(group.sort((a,b)=>{
+//     const ageA = a.age
+//     const ageB = b.age
 
-    if (ageA > ageB){
-        return 1;
-    }
-    if (ageA < ageB){
-        return -1
-    }
-    return 0
-}))
+//     if (ageA > ageB){
+//         return 1;
+//     }
+//     if (ageA < ageB){
+//         return -1
+//     }
+//     return 0
+// }))
 
+
+//JS Function that checks if the user has access or not
+//Retrun boolean value
+
+
+// const checkRole = (ur , sr) =>ur.some((role)=>
+//         sr.includes(role))
+
+
+
+// console.log(checkRole(["admin", "vendor"], ["user" , "vendor"] ))
+// console.log(checkRole(["shop", "facility"], ["user" , "vendor"]))
+// console.log(checkRole(["user", "vendor"], ["user" , "vendor"]))
+
+
+//slug
+
+// const slugFormatter = (string) =>  string.toString().toLowerCase(/~`!@#$%^&*()_+=:;"'<>,./g).replaceAll(" ", "-")
+
+
+// console.log(slugFormatter("Understanding Nestjs Architectire"))
+// console.log(slugFormatter("An Introduction's to C"))
+
+//addition of array
+
+// const array = [1,2,3,4,5,6,7,8,9,10]
+
+// const sumArray = (arr)=> arr.reduce((accumulator , currentValue)=> accumulator+currentValue,0)
+
+// const resp = sumArray(array)
+// console.log(resp)
+
+//Compare the 2 arrays and find common food if any: Assignment
+
+const food1 = ["Apple" , "Banana" , "Mango"]
+const food2 = ["Apple" , "Banan" , "Watermelon"]
+
+const findCommon = (foodA , foodB)=> foodA.filter((element)=> foodB.includes(element))
+console.log(findCommon(food1,food2)) 
+
+//Pagination
+
+const array = ["Samundra" , "Sagar" , "Raktim" , "Kiran" , "Sangeet","Amod","Royal","Suman", "Sandeep" , "Santosh"]
+
+const pagination = (arr ,page , limit) => arr.slice((limit*page)-limit ,limit*page)
+
+console.log(pagination(array,1,5))
+console.log(pagination(array,2,5))
+console.log(pagination(array,3,2))
 
