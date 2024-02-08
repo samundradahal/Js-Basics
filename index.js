@@ -516,19 +516,124 @@ Comment */
 
 //Compare the 2 arrays and find common food if any: Assignment
 
-const food1 = ["Apple" , "Banana" , "Mango"]
-const food2 = ["Apple" , "Banan" , "Watermelon"]
+// const food1 = ["Apple" , "Banana" , "Mango"]
+// const food2 = ["Apple" , "Banan" , "Watermelon"]
 
-const findCommon = (foodA , foodB)=> foodA.filter((element)=> foodB.includes(element))
-console.log(findCommon(food1,food2)) 
+// const findCommon = (foodA , foodB)=> foodA.filter((element)=> foodB.includes(element))
+// console.log(findCommon(food1,food2)) 
 
 //Pagination
 
-const array = ["Samundra" , "Sagar" , "Raktim" , "Kiran" , "Sangeet","Amod","Royal","Suman", "Sandeep" , "Santosh"]
+// const array = ["Samundra" , "Sagar" , "Raktim" , "Kiran" , "Sangeet","Amod","Royal","Suman", "Sandeep" , "Santosh"]
 
-const pagination = (arr ,page , limit) => arr.slice((limit*page)-limit ,limit*page)
+// const pagination = (arr ,page , limit) => arr.slice((limit*page)-limit ,limit*page)
 
-console.log(pagination(array,1,5))
-console.log(pagination(array,2,5))
-console.log(pagination(array,3,2))
+// console.log(pagination(array,1,5))
+// console.log(pagination(array,2,5))
+// console.log(pagination(array,3,2))
+
+//Immutable JS
+
+//JS finction that checks username and password in database and check if the password match or not.
+
+// const db = [{name : "samundra" , password: "sam"},{name : "sagar" , password: "sagar123"},{name : "kiran" , password: "password"},{name : "sangeet" , password: "password2"},{name: "sandeep" , password: "pass123"},{name : "samundras" , password: "helloworld"}]
+
+// const checkUsernamePassword = (arr , username , password)=> arr.some((element)=> element.name === username && element.password === password )
+//do using find
+
+// console.log(checkUsernamePassword(db, "sagar" , "sagar123"))
+// console.log(checkUsernamePassword(db, "samundra" , "sam1"))
+
+// Search
+// const searchUsername = (arr , word) => arr.filter((element) => element.name.toLowerCase().slice(0, word.length) === word.toLowerCase())
+
+// console.log(searchUsername(db, "samundra"))
+
+//Date
+
+//ISO String , UTC string , Time String
+
+// const now = new Date()
+// console.log(now)
+// console.log(now.toISOString())
+// console.log(now.toDateString())
+// console.log(now.toUTCString())
+// console.log(now.toTimeString())
+
+
+// const birds = ["Eagle","Emus","Parrot","Sparrow","egrets"]
+// const findBird = (bird)=>{ 
+//     bird.filter((element)=>{
+//         if 
+//     })
+// }
+
+// console.log(findBird(birds))
+
+//1.
+
+const characters = [
+    {
+        name: 'Luke Skywalker',
+        height: '172',
+        mass: '77',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+    {
+        name: 'Darth Vader',
+        height: '202',
+        mass: '136',
+        eye_color: 'yellow',
+        gender: 'male',
+    },
+    {
+        name: 'Leia Organa',
+        height: '150',
+        mass: '49',
+        eye_color: 'brown',
+        gender: 'female',
+    },
+    {
+        name: 'Anakin Skywalker',
+        height: '188',
+        mass: '84',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+];
+
+const nameFinder = (character)=>character.map((element)=> element.name)
+const heightFinder = (character)=>character.map((element)=> element.height)
+const nameAndHeightFinder = (character) => character.map((element) => {
+    const {name,height} = element
+    return {name,height}
+} )
+const firstNameFinder = (character) => character.map((element) => element.name.split(" ")[0])
+
+console.log(nameFinder(characters))
+console.log(heightFinder(characters))
+console.log(nameAndHeightFinder(characters))
+console.log(firstNameFinder(characters))
+
+const totalMass = (character)=> character.reduce((accumulator,currentValue) => accumulator+ Number(currentValue.mass),0)
+const totalHeight = (character) => character.reduce((acc, current)=> acc + Number(current.height),0)
+const totalCharacterCount = (character) => character.reduce((acc, current)=> acc + current.name.length,0)
+const blueEyeCharacterCount = (character) => {
+    return blue.reduce((acc ,cv )=> acc ,{})
+}
+
+console.log(totalMass(characters))
+console.log(totalHeight(characters))
+console.log(totalCharacterCount(characters))
+console.log(blueEyeCharacterCount(characters))
+
+const greaterThanHun = (character)=> character.filter((element) => Number(element.mass) > 100)
+const lessThanTwoHun = (character)=> character.filter((element) => Number(element.height) < 200)
+const maleCharacter = (character)=> character.filter((element) => element.gender.toLowerCase() === "male")
+const femaleCharacter = (character)=> character.filter((element) => element.gender.toLowerCase() === "female")
+
+console.log(greaterThanHun(characters))
+console.log(lessThanTwoHun(characters))
+console.log(femaleCharacter(characters))
 
